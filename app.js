@@ -9,6 +9,7 @@ form.addEventListener("submit", (event) => {
   let grade = event.target.grade.value;
   render(stdName, date, gender, phoneN, grade);
   console.log(stdName, date, gender, phoneN, grade);
+  form.reset();
 });
 
 let table1 = document.createElement("table");
@@ -48,4 +49,3 @@ function render(stdName, date, gender, phoneN, grade) {
   tr.appendChild(td5);
   td5.textContent = grade;
 }
-
