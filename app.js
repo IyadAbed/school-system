@@ -46,5 +46,6 @@ function render(stdName, date, gender, phoneN, grade) {
   td4.textContent = phoneN;
   let td5 = document.createElement("td");
   tr.appendChild(td5);
-  td5.textContent = grade;
+  td5.textContent = grade;
 }
+
