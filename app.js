@@ -80,6 +80,7 @@ function student(stdName, date, gender, phoneN, Major, image) {
 function render() {
   for (let i = 0; i < stData.length; i++) {
     let container = document.getElementById("submited");
+    let cardDiv = document.createElement("div");
     let imagee = document.createElement("img");
     let card = document.createElement("div");
     let cardName = document.createElement("h3");
@@ -96,8 +97,8 @@ function render() {
     cardPhone.textContent = `Phone Number: ${stData[i].phoneN}`;
     imagee.src = `${stData[i].image}`;
 
-    container.className = "card me-5 w-25 d-inline-block";
-    imagee.className = "card-img-top w-25";
+    cardDiv.className = "card col-lg-3 col-md-8 col-sm-5 justify-content-center";
+    imagee.className = "card-img-top";
     card.className = "card-body";
     cardName.className = "card-text";
     cardUl.className = "list-group";
@@ -114,7 +115,9 @@ function render() {
     card.appendChild(cardName);
     card.appendChild(cardUl);
 
-    container.appendChild(imagee);
-    container.appendChild(card);
+    cardDiv.appendChild(imagee);
+    cardDiv.appendChild(card);
+
+    container.appendChild(cardDiv);
   }
 }
