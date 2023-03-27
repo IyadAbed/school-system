@@ -79,15 +79,28 @@
             <label for="phoneN">Phone number</label>
             <input type="tel" id="phoneN" name="phoneN" />
           </div>
-          <div class="p-3">
-            <label for="grade" class="pe-5">Grade</label>
-            <input type="number" id="grade" name="grade" />
+          <div class="mb-3">
+            <label class="form-label text-white">Major</label>
+            <select class="form-select fs-5" name="Major" required>
+              <option>Administration</option>
+              <option>IT</option>
+              <option>Science</option>
+              <option>Art</option>
+            </select>
+            <div class="mb-3">
+              <label class="form-label fs-5 text-white">image</label>
+              <input type="tel" class="form-control fs-5" value="./images/download.png"  name="image" required placeholder="">
+            </div>
           </div>
           <button type="submit">Add New STD</button>
         </form>
         <br /><br />
-        <div id="table"></div>
-      </div>
+        <div class="container-fluid justify-content-center">
+          <h1> current STD </h1>
+          <div class="container d-flex flex-row justify-content-center" id="submited">
+          </div>
+        </div>
+        </div>
     </main>
     <footer></footer>
     <script
@@ -96,6 +109,5 @@
       crossorigin="anonymous"
     ></script>
     <script src="app.js"></script>
-    
   </body>
 </html>
